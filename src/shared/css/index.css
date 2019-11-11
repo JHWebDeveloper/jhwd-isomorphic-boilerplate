@@ -6,7 +6,7 @@
 html, body, div, iframe,
 header, nav, main, section, article,
 figure, footer, address, aside,
-h1, h2, p, ul, li, a, button, span, img {
+h1, h2, h3, p, ul, li, a, button, span, img {
   margin: 0;
   padding: 0;
   border: 0;
