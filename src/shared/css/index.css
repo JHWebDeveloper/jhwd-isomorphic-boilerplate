@@ -21,6 +21,7 @@ html, body {
 }
 
 body {
+  padding-left: calc(100vw - 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
