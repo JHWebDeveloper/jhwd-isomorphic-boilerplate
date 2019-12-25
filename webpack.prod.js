@@ -1,11 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const postcssPresetEnv = require('postcss-preset-env')
 const cssMQPacker = require('css-mqpacker')
 const cssnano = require('cssnano')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const jsloader = {
   test: /\.js$/,
@@ -15,7 +15,7 @@ const jsloader = {
 
 const serverConfig = {
   mode: 'production',
-  entry: './src/server',
+  entry: path.join('src', 'server'),
   target: 'node',
   externals: [nodeExternals()],
   output: {
@@ -41,7 +41,7 @@ const serverConfig = {
 
 const browserConfig = {
   mode: 'production',
-  entry: './src/client',
+  entry: path.join('src', 'client'),
   output: {
     path: path.join(__dirname, 'build', 'client'),
     filename: 'bundle.js',
@@ -78,7 +78,7 @@ const browserConfig = {
 			'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.min.css',
+      filename: path.join('css', 'main.min.css'),
     })
   ]
 }

@@ -55,7 +55,7 @@ module.exports = {
 			'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/main.min.css',
+      filename: path.join('css', 'main.min.css'),
     }),
     new webpack.HotModuleReplacementPlugin()
   ]
