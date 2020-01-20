@@ -15,7 +15,7 @@ const jsloader = {
 
 const serverConfig = {
   mode: 'production',
-  entry: path.join('src', 'server'),
+  entry: path.join(__dirname, 'src', 'server'),
   target: 'node',
   externals: [nodeExternals()],
   output: {
@@ -41,7 +41,7 @@ const serverConfig = {
 
 const browserConfig = {
   mode: 'production',
-  entry: path.join('src', 'client'),
+  entry: path.join(__dirname, 'src', 'client'),
   output: {
     path: path.join(__dirname, 'build', 'client'),
     filename: 'bundle.js',
