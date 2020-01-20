@@ -75,10 +75,10 @@ const browserConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-			'process.env.WEBPACK': true
+      'process.env.WEBPACK': true
     }),
     new MiniCssExtractPlugin({
-      filename: path.join('css', 'main.min.css'),
+      filename: path.join('css', 'main.min.css')
     })
   ]
 }
