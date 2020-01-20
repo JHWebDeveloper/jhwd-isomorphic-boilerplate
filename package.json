@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/server",
   "scripts": {
+    "lint": "eslint . --ext .js",
     "start": "NODE_ENV=development babel-node src/server",
     "server": "NODE_ENV=development nodemon --exec babel-node src/server",
     "build": "rimraf build && webpack --config webpack.prod.js",
