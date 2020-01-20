@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'development') {
 
   app.use(require('webpack-hot-middleware')(compiler))
   
-  app.use(express.static(path.resolve(__dirname, 'src', 'client')))
+  app.use(express.static(path.join(__dirname, 'src', 'client')))
 }
 
 if (process.env.NODE_ENV === 'production') {
