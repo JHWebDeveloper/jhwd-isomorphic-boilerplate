@@ -1,6 +1,8 @@
 import React from 'react'
 import Root from './components/Root'
 
+import Main from '../shared/components/Main'
+
 const routes = [
   {
     component: Root,
@@ -8,7 +10,7 @@ const routes = [
       {
         path: '/',
         exact: true,
-        component: false
+        component: Main
       }
     ]
   }
