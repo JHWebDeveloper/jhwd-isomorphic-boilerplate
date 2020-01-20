@@ -6,9 +6,7 @@ import { renderToString } from 'react-dom/server'
 import { matchRoutes } from 'react-router-config'
 
 import routes from '../shared/routes'
-import HTMLTemplate from '../shared/components/html/HTMLTemplate'
-
-import SiteData from './routes/SiteData'
+import HTMLTemplate from '../shared/components/HTMLTemplate'
 
 const app  = express()
 const port = process.env.PORT || 3000

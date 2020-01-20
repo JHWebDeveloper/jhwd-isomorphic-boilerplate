@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticRouter } from 'react-router-dom'
-import App from '../main/App'
+import App from './App'
 
 const HTMLTemplate = ({ location }) => (
   <html lang="en-US">
