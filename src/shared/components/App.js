@@ -8,12 +8,7 @@ import routes from '../routes'
 
 const App = () => (
   <Provider>
-    <Header />
-    <main>
-      {renderRoutes(routes)}
-    </main>
-    <Footer />
-    <ModalLoader />
+    {renderRoutes(routes)}
   </Provider>
 )
 
