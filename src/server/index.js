@@ -11,7 +11,9 @@ import HTMLTemplate from '../shared/components/HTMLTemplate'
 const app  = express()
 const port = process.env.PORT || 3000
 
-app.use(helmet())
+app.use(helmet({
+	contentSecurityPolicy: false
+}))
 
 if (process.env.NODE_ENV === 'development') {
   const config = require('../../webpack.dev.js')
