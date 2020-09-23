@@ -1,5 +1,7 @@
 import React from 'react'
 import { StaticRouter } from 'react-router-dom'
+import { string } from 'prop-types'
+
 import App from './App'
 
 const HTMLTemplate = ({ location }) => (
@@ -23,5 +25,9 @@ const HTMLTemplate = ({ location }) => (
 		</body>
 	</html>
 )
+
+HTMLTemplate.propTypes = {
+	location: string.isRequired
+}
 
 export default HTMLTemplate
