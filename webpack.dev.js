@@ -39,11 +39,12 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: [
-                postcssPresetEnv({ stage: 0 }),
-                cssMQPacker({ sort: true })
-              ]
+							postcssOptions: {
+								plugins: [
+									postcssPresetEnv({ stage: 0 }),
+									cssMQPacker({ sort: true })
+								]
+							}
             }
           }
         ]
