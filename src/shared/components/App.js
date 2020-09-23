@@ -7,9 +7,9 @@ import { Provider } from '../store'
 import routes from '../routes'
 
 const App = () => (
-  <Provider>
-    {renderRoutes(routes)}
-  </Provider>
+	<Provider>
+		{renderRoutes(routes)}
+	</Provider>
 )
 
 export default App

@@ -1,43 +1,43 @@
 *, *::before, *::after {
-  box-sizing: border-box;
-  user-select: none;
+	box-sizing: border-box;
+	user-select: none;
 }
 
 html, body, div, iframe,
 header, nav, main, section, article,
 figure, footer, address, aside,
 h1, h2, h3, p, ul, li, a, button, span, img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 html, body {
-  min-width: 100%;
-  min-height: 100%;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 body {
-  padding-left: calc(100vw - 100%);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+	padding-left: calc(100vw - 100%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 a, button {
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
 }
 
 a { text-decoration: none; }
 
 a:matches(:link, :visited),
 button {
-  color: currentColor;
+	color: currentColor;
 }
 
 button { background-color: transparent; }

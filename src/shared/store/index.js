@@ -7,20 +7,20 @@ const initState = {}
 export const Context = createContext()
 
 export const Provider = ({children }) => {
-  const [state, dispatch] = useReducer(reducer, initState)
+	const [state, dispatch] = useReducer(reducer, initState)
 
-  return (
-    <Context.Provider value={{
-      ...state,
-      dispatch: input => (
-        input instanceof Function ? input(dispatch, state) : dispatch(input)
-      )
-    }}>
-      { children }
-    </Context.Provider> 
-  )
+	return (
+		<Context.Provider value={{
+			...state,
+			dispatch: input => (
+				input instanceof Function ? input(dispatch, state) : dispatch(input)
+			)
+		}}>
+			{ children }
+		</Context.Provider> 
+	)
 }
 
 Provider.propTypes = {
-  children: oneOfType([element, arrayOf(element)]).isRequired
+	children: oneOfType([element, arrayOf(element)]).isRequired
 }

@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 import App from '../shared/components/App'
 
 hydrate(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>,
+	document.getElementById('root')
 )
 
 if (module.hot) module.hot.accept()
