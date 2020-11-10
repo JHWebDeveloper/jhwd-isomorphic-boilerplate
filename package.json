@@ -6,6 +6,7 @@
 	"scripts": {
 		"lint": "eslint . --ext .js",
 		"start": "NODE_ENV=development babel-node src/server",
+		"dev": "npm start",
 		"server": "NODE_ENV=development nodemon --exec babel-node src/server",
 		"build": "rimraf build && webpack --config webpack.prod.js",
 		"serve": "cd build && node server.js"
