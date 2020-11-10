@@ -43,7 +43,7 @@ module.exports = {
 	},
 	plugins: [
 		new EnvironmentPlugin({
-			WEBPACK: true
+			CLIENT: true
 		}),
 		new MiniCssExtractPlugin({
 			filename: path.join('css', '[name].min.css')
