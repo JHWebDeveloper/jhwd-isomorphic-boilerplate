@@ -10,10 +10,9 @@ const HTMLTemplate = ({ location }) => (
 			<meta charSet="UTF-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 			<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-			
 			<title></title>
 			<meta name="description" content="" />
-			<link rel="stylesheet" href="/css/main.min.css" />
+			<link rel="stylesheet" href="./css/index.min.css" />
 		</head>
 		<body>
 			<div id="root">
@@ -21,7 +20,7 @@ const HTMLTemplate = ({ location }) => (
 					<App/>
 				</StaticRouter>
 			</div>
-			<script src="/bundle.js"></script>
+			<script src="./index.bundle.js"></script>
 		</body>
 	</html>
 )
