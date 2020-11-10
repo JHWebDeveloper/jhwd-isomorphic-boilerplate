@@ -6,7 +6,7 @@ const initState = {}
 
 export const Context = createContext()
 
-export const Provider = ({children }) => {
+export const Provider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initState)
 
 	return (
