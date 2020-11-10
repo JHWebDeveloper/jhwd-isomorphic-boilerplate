@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge')
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const { IgnorePlugin } = require('webpack')
 
 const common = require('./webpack.common')
 
@@ -20,17 +21,13 @@ const serverConfig = {
 	module: {
 		rules: [
 			common.module.rules[0], //.js
-			{
-				test: /\.css$/,
-				use: [{
-					loader: 'file-loader',
-					options: {
-						emitFile: false
-					}
-				}]
-			}
 		]
-	}
+	},
+	plugins: [
+		new IgnorePlugin({
+			resourceRegExp: /\.css$/
+		})
+	]
 }
 
 const browserConfig = merge(common, {
