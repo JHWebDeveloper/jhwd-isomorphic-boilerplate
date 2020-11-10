@@ -7,7 +7,7 @@ import { matchRoutes } from 'react-router-config'
 import routes from '../shared/routes'
 import HTMLTemplate from '../shared/components/HTMLTemplate'
 
-const app  = express()
+const app = express()
 const port = process.env.PORT || 3000
 const dev = process.env.NODE_ENV === 'development'
 
@@ -31,11 +31,9 @@ app.use(express.static('client'))
 app.get('*', (req, res) => {
 	const branch = matchRoutes(routes, req.url)
 
-	const promises = branch.map(({ route, match }) => {
-		return route.loadData
-			? route.loadData(match)
-			: Promise.resolve(null)
-	})
+	const promises = branch.map(({ route, match }) => route.loadData
+		? route.loadData(match)
+		: Promise.resolve(null))
 
 	Promise.all(promises).then(() => {
 		const html = renderToString(<HTMLTemplate location={req.url} />)

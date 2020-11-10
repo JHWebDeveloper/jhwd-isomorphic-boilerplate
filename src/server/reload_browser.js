@@ -16,7 +16,7 @@ export const reload = port => {
 		const localhostRegex = createLocalhostRegex(port)
 		let match = false
 
-		while (match = localhostRegex.exec(stdout)) {
+		while ((match = localhostRegex.exec(stdout)) !== null) {
 			const tabId = match[1]
 
 			exec(`chrome-cli reload -t ${tabId}`, reloadErr => {

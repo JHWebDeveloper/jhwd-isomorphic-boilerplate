@@ -20,7 +20,7 @@ const serverConfig = {
 	externals: [nodeExternals()],
 	module: {
 		rules: [
-			common.module.rules[0], //.js
+			common.module.rules[0] //.js
 		]
 	},
 	plugins: [
