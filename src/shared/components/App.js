@@ -1,7 +1,7 @@
 import React from 'react'
 import { renderRoutes } from 'react-router-config'
 
-if (process.env.CLIENT) require('../css/index.css')
+import '../css/index.css'
 
 import { Provider } from '../store'
 import routes from '../routes'
