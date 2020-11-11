@@ -1,6 +1,5 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { EnvironmentPlugin } = require('webpack')
 const postcssPresetEnv = require('postcss-preset-env')
 const cssMQPacker = require('css-mqpacker')
 
@@ -42,9 +41,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new EnvironmentPlugin({
-			CLIENT: true
-		}),
 		new MiniCssExtractPlugin({
 			filename: path.join('css', '[name].min.css')
 		})
