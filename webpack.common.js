@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const postcssPresetEnv = require('postcss-preset-env')
 const cssMQPacker = require('css-mqpacker')
+const postcssPseudoIs = require('postcss-pseudo-is')
 
 module.exports = {
 	target: 'web',
@@ -30,6 +31,7 @@ module.exports = {
 						options: {
 							postcssOptions: {
 								plugins: [
+									postcssPseudoIs(),
 									postcssPresetEnv({ stage: 0 }),
 									cssMQPacker({ sort: true })
 								]
