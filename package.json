@@ -13,7 +13,7 @@
 	"author": "Jonathan Hamilton",
 	"license": "MIT",
 	"dependencies": {
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"helmet": "^4.4.1",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.1",
